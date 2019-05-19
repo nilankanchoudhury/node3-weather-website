@@ -8,9 +8,11 @@ const forecast =require('./utils/forecast')
 
 const app = express()
 
+const port = process.env.PORT || 3000 
+
 //app.com
 //app.com/about
-//app.com/help
+//app.com/help 
 
 console.log(__dirname)
 
@@ -105,6 +107,6 @@ app.get('*',(req,res)=>{
 })
 //--------end of 404 page request ------
 
-app.listen(3000,()=>{
-    console.log('Server is up and running !')
+app.listen(port,()=>{
+    console.log('Server is up and running on port :', port)
 })
