@@ -12,7 +12,8 @@ const request = require('request')
                callback('Unable to find the given location',undefined)
            }else{
             //    callback(undefined,'It is currently ' +response.body.currently.temperature + ' degrees out.There is a ' + response.body.currently.precipProbability +'% chance of rain.')
-                callback(undefined,'It is currently ' +body.currently.temperature + ' degrees out.There is a ' + body.currently.precipProbability +'% chance of rain.Keep using out weather app for all updates.')
+                console.log(body.daily.summary)
+                callback(undefined,body.daily.summary + 'It is currently ' +body.currently.temperature + ' degrees out.There is a ' + body.currently.precipProbability +'% chance of rain.Keep using out weather app for all updates.')
            }
         })
 }
